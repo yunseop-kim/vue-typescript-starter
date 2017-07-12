@@ -1,34 +1,31 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-      <br>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+  <div>
+    <h2 class="hello">Hello {{name}}</h2>
   </div>
 </template>
 
+
+
 <script lang="ts">
+// export default {
+//   props: {
+//     name: {
+//       type: String,
+//       default: 'Vue!'
+//     }
+//   }
+// }
 import Vue from 'vue'
 import {
-  Component
+  Component,
+  Prop
 } from 'vue-property-decorator'
 
 @Component
 export default class Hello extends Vue {
-  msg: string = 'Welcome to Your Vue.js App'
+  @Prop({type: String , default: "Vue!"})
+  name: string
+  // msg: string = 'Welcome to Your Vue.js App'
 }
 </script>
 
