@@ -42,9 +42,7 @@ export default class Login extends Vue {
 }
 </script>
 
-<style lang="css">
-/*.error
-  color: red*/
+<style>
 .error {
   color: red
 }
